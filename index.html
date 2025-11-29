@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons (GitHub, LinkedIn, Instagram) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <!-- 1. The Atmosphere -->
+    <div class="noise-overlay"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- 2. Navigation -->
+    <header>
+      <div class="logo magnetic">R.</div>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="#"
+              onclick="switchPage('home')"
+              id="nav-home"
+              class="magnetic active"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="switchPage('resume')"
+              id="nav-resume"
+              class="magnetic"
+              >Resume</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="switchPage('biodata')"
+              id="nav-biodata"
+              class="magnetic"
+              >Bio-data</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 3. Main Content -->
+    <main>
+      <!-- PAGE: HOME -->
+      <section id="home" class="active-page">
+        <div class="hero-content">
+          <!-- Image on the LEFT -->
+          <div class="profile-img-container magnetic">
+            <img
+              src="profile.jpg"
+              alt="Profile Photo"
+              onerror="this.style.display='none'; alert('Error: Rename your photo to profile.jpg!')"
+            />
+          </div>
+
+          <div class="hero-text">
+            <h1>Reynol<br />Dsouza</h1>
+            <p>A learner exploring the world of technology and innovation.</p>
+
+            <!-- NEW: Icons for Social Links -->
+            <div class="social-links">
+              <a
+                href="https://github.com/reynol-31"
+                target="_blank"
+                class="magnetic"
+                title="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/reynol-d-souza-593543290/"
+                target="_blank"
+                class="magnetic"
+                title="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/reynol_dsouza/"
+                target="_blank"
+                class="magnetic"
+                title="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE: RESUME -->
+      <section id="resume">
+        <h2>Resume</h2>
+
+        <div class="resume-grid">
+          <div class="resume-category">Education</div>
+          <div class="resume-content">
+            <div class="resume-item">
+              <h3>BE in Computer Science</h3>
+              <span class="date"
+                >Shri Madhwa Vadiraja Institute Of Technology | 2023 -
+                Present</span
+              >
+              <!-- <p>Specialization details or major subjects studied.</p> -->
+            </div>
+            <div class="resume-item">
+              <h3>PUC</h3>
+              <span class="date">MGM PU College| 2021 - 2023</span>
+              <!-- <p>Major subjects and grades.</p> -->
+            </div>
+            <div class="resume-item">
+              <h3>High School</h3>
+              <span class="date"
+                >Milagres English Medium High School | 2018 - 2021</span
+              >
+              <!-- <p>Major subjects and grades.</p> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-grid">
+          <div class="resume-category">Projects</div>
+          <div class="resume-content">
+            <!-- CHANGE: Your Experience Here -->
+            <div class="resume-item">
+              <h3>Toll Management System</h3>
+              <span class="date"
+                >A toll management system automates the collection, tracking,
+                and processing of toll fees for vehicles passing through toll
+                points, ensuring efficient payment and reporting.</span
+              >
+              <p>Built using Java.</p>
+            </div>
+            <div class="resume-item">
+              <h3>Urban Rides</h3>
+              <span class="date"
+                >A full-stack web application for renting vehicles, featuring
+                customer login/signup, vehicle listings, rental booking,
+                payments, feedback, and an admin dashboard.</span
+              >
+              <p>Built with React, Node.js/Express, and MySQL.</p>
+            </div>
+            <div class="resume-item">
+              <h3>FlashMind</h3>
+              <span class="date">AI Powered Flashcard Generator</span>
+              <p>
+                Built with Flask, Python, FastAPI, SQLite, and a fine-tuned LLM.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-grid">
+          <div class="resume-category">Skills</div>
+          <div class="resume-content">
+            <p>
+              HTML/CSS, JavaScript, Python, Java, React, Flask, FastAPI, SQLite,
+              MySQL .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE: BIO-DATA -->
+      <section id="biodata">
+        <h2>Bio-data</h2>
+        <div class="biodata-wrapper">
+          <table>
+            <tbody>
+              <!-- CHANGE: Your Personal Details Here -->
+              <tr>
+                <td>Full Name</td>
+                <td>Reynol Dsouza</td>
+              </tr>
+              <tr>
+                <td>Date of Birth</td>
+                <td>31 / 05/ 2005</td>
+              </tr>
+              <tr>
+                <td>Nationality</td>
+                <td>Indian</td>
+              </tr>
+              <tr>
+                <td>Languages</td>
+                <td>English, Hindi, Kannada</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>Udupi, India</td>
+              </tr>
+              <tr>
+                <td>Hobbies</td>
+                <td>Gaming, Anime, Manga.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: Icons Positioned statically at the bottom -->
+    <footer
+      style="
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+        font-size: 1.2rem;
+        width: 100%;
+      "
+    >
+      <a
+        href="https://github.com/reynol-31"
+        target="_blank"
+        class="magnetic"
+        style="color: inherit; text-decoration: none; margin: 0 15px"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/reynol-d-souza-593543290/"
+        target="_blank"
+        class="magnetic"
+        style="color: inherit; text-decoration: none; margin: 0 15px"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/reynol_dsouza/"
+        target="_blank"
+        class="magnetic"
+        style="color: inherit; text-decoration: none; margin: 0 15px"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+    </footer>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
